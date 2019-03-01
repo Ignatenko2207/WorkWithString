@@ -8,7 +8,7 @@ public class AppRunner {
 	
 	public static void main(String[] args) {
 
-		// комментарий на русском
+		// РєРѕРјРјРµРЅС‚Р°СЂРёР№ РЅР° СЂСѓСЃСЃРєРѕРј
 		
 		String name = "Alex";
 		
