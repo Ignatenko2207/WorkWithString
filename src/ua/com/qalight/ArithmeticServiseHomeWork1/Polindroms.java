@@ -1,12 +1,9 @@
 package ua.com.qalight.ArithmeticServiseHomeWork1;
 
-import java.util.Collection;
 import java.util.Collections;
 import java.util.HashSet;
 import java.util.Set;
 import java.util.logging.Logger;
-
-import javafx.print.Collation;
 import ua.com.qalight.AppRunner;
 
 public class Polindroms {
@@ -27,13 +24,12 @@ public class Polindroms {
 		
 		Set<Integer> polindroms = new HashSet<>();
 		String polindromsAsString = String.valueOf(polindroms);
-		StringBuffer polindromsBuffer = new StringBuffer(polindromsAsString);
-		polindromsBuffer = polindromsBuffer.reverse();
-		
-		
 		for (int i = min; i <= max; i++) {
 			for (int j = min; j <= max; j++) {
 				int tempResult = i*j;
+				
+				StringBuffer polindromsBuffer = new StringBuffer(polindromsAsString);
+				polindromsBuffer = polindromsBuffer.reverse();
 				if (isPolindroms(tempResult)) {
 					polindroms.add(tempResult);
 				}
@@ -47,8 +43,9 @@ public class Polindroms {
 
 	private static boolean isPolindroms(int tempResult) {
 	
-		if (po) {
+		if (tempResult == polindromsBuffer) {
 			
+			return true;
 		}
 		
 		return false;
