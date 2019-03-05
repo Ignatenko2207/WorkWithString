@@ -4,6 +4,9 @@ import java.util.Collections;
 import java.util.HashSet;
 import java.util.Set;
 import java.util.logging.Logger;
+
+import com.sun.org.apache.xpath.internal.operations.Equals;
+
 import ua.com.qalight.AppRunner;
 
 public class Polindroms {
@@ -15,21 +18,21 @@ public class Polindroms {
 		int min = 1000;
 		int max = 9999;
 		
+		
+		
 		logger.info("The sum by numbers of is " + getMaxPolindromInRange(min, max));
 
 	}
 
-	private static int getMaxPolindromInRange(int min, int max) {
+	 private static int getMaxPolindromInRange(int min, int max) {
 		
-		
-		Set<Integer> polindroms = new HashSet<>();
-		String polindromsAsString = String.valueOf(polindroms);
+		 	Set<Integer> polindroms = new HashSet<>();
+			
 		for (int i = min; i <= max; i++) {
 			for (int j = min; j <= max; j++) {
 				int tempResult = i*j;
 				
-				StringBuffer polindromsBuffer = new StringBuffer(polindromsAsString);
-				polindromsBuffer = polindromsBuffer.reverse();
+				
 				if (isPolindroms(tempResult)) {
 					polindroms.add(tempResult);
 				}
@@ -41,14 +44,14 @@ public class Polindroms {
 		return Collections.max(polindroms);
 	}
 
+	@SuppressWarnings("unlikely-arg-type")
 	private static boolean isPolindroms(int tempResult) {
-	
-		if (tempResult == polindromsBuffer) {
-			
-			return true;
-		}
+		Set<Integer> polindroms = new HashSet<>();
+		String polindromsAsString = String.valueOf(polindroms);
+		StringBuffer polindromsBuffer = new StringBuffer(polindromsAsString);
+		polindromsBuffer = polindromsBuffer.reverse();
 		
-		return false;
+		return polindromsAsString.equals(polindromsBuffer);
 	}
 
 }

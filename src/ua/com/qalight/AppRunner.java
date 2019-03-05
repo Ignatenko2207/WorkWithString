@@ -23,7 +23,7 @@ public class AppRunner {
 		listString.add("Serg");
 		listString.add("Sasha");
 		
-/*		logger.info("List size is  "+ listString.size());
+		logger.info("List size is  "+ listString.size());
 		
 		Set<String> setString = new HashSet<>(listString);
 		
@@ -43,34 +43,34 @@ public class AppRunner {
 		
 		firstString = queueString.peek();
 		
-		logger.info("Queue size is  "+ queueString.size() + "first is " + firstString);*/
+		logger.info("Queue size is  "+ queueString.size() + "first is " + firstString);
 		
-//		Map<Integer, String> mapString = new HashMap<>();
-//		
-//		int i = 0;
-//		for(; i < listString.size(); ) {
-//			mapString.put(i, listString.get(i));
-//			i++;
-//		}
-//		logger.info("Map size is  " + mapString.size());
-//		
-//		logger.info("First is  " + mapString.get(0));
-//		
-//		mapString.put(0, "Super Alex");
-//		logger.info("First is  " + mapString.get(0));
-//		
-//		mapString.put(null, "Super puper Alex");
-//		logger.info("Second is  " + mapString.get(null));
-//		
-//		Integer nullobj = null;
-//		logger.info(String.valueOf(nullobj));
+		Map<Integer, String> mapString = new HashMap<>();
 		
-		for (int i = 0; i < listString.size(); i++) {
+		int i = 0;
+		for(; i < listString.size(); ) {
+		mapString.put(i, listString.get(i));
+		i++;
+		}
+		logger.info("Map size is  " + mapString.size());
+		
+		logger.info("First is  " + mapString.get(0));
+		
+		mapString.put(0, "Super Alex");
+		logger.info("First is  " + mapString.get(0));
+		
+		mapString.put(null, "Super puper Alex");
+		logger.info("Second is  " + mapString.get(null));
+		
+		Integer nullobj = null;
+		logger.info(String.valueOf(nullobj));
+		
+		for (int i1 = 0; i1 < listString.size(); i1++) {
 			
-			logger.info(listString.get(i));
+			logger.info(listString.get(i1));
 			
-			if (i < listString.size()-1) {
-				logger.info(" Next index will be " + (i+1));
+			if (i1 < listString.size()-1) {
+				logger.info(" Next index will be " + (i1+1));
 			}
 			
 		}
@@ -94,11 +94,7 @@ public class AppRunner {
 		}
 	
 	boolean isNotLoggined = true;
-	do {
-		// service to login
-		// if-statement to change condition
-		isNotLoggined = false;
-	}
+	
 	}
 
 	
